@@ -13,7 +13,7 @@ class Application:
         self.root.grid_columnconfigure(0,weight=1)
         self.root.config(bg="#ffdddd")
 
-        top_lable = Label(self.root,text="Youtube download manager",fg="orange",font=('Type Xero',70))
+        top_lable = Label(self.root,text="Youtube Downloader",fg="orange",font=('Type Xero',70))
         top_lable.grid(pady=(0,10))
 
         link_lable = Label(self.root,text="Please paste any youtube video link below",font=('Type Xero',30))
@@ -115,6 +115,7 @@ class SecondApp:
 
     def show_progress(self,streams=None,Chunks=None,filehandle=None,bytes_remaining=0):
         self.percentCount = float("%0.2f"% (100-(100*(bytes_remaining/self.MaxFileSize))))
+        print(self.percentCount)
         if self.percentCount < 100:
             self.loadingPercent.config(text=self.percentCount)
         else:
@@ -134,7 +135,7 @@ class SecondApp:
 
 if __name__=="__main__":
     window = Tk()
-    window.title("Youtube download manager")
+    window.title("Welcome to Youtube downloader")
     window.state("zoomed")
     app = Application(window)
 
