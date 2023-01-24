@@ -1,0 +1,16 @@
+Title: Flatemates Bill
+Description: An app that gets amount of bill for particular period and the days that each flatemate stayed in.
+             And return how much each flatemates has to pay.
+             It also generate PDF report for the peroid of time with names of the fatemates , the period and how much had to pay.
+
+Objects:
+        Bill:
+            amount
+            period
+        flatemates:
+            names
+            no.of days stayed
+            pays(Bill)
+        PDFReport:
+            filename
+            generate(flatemate1, flatmate2, bill)
